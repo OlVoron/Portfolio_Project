@@ -1,0 +1,8 @@
+1. Link for Perfomance testing DAT (iPhone12Pro/Safari14)
+https://www.browserstack.com/speedlab/new-report/517808b842e3eb8d3397810cbac0001d41b6a3d8
+
+2. Link for Perfomance testing DAT (OS X Catalina/Chrome110)
+https://www.browserstack.com/speedlab/new-report/f17ad3e367815a83bf10c836838fd25c2c86fe72
+
+3. Link for Perfomance testing DAT (Windows10/Chrome110)
+https://www.browserstack.com/speedlab/new-report/88e6f5e326e82b272357af58b3458a5836972be0
