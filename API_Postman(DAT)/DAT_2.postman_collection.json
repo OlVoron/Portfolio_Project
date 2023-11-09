@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "9513e528-2bca-4e74-b0ba-c2c2afc10679",
+		"name": "DAT_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29356510"
+	},
+	"item": [
+		{
+			"name": "https://www.dat.com/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response size is less than 300 KB\", function () {\r",
+							"    pm.expect(pm.response.responseSize).to.be.below(300000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Header is correct\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\", \"text/html; charset=UTF-8\");\r",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");\r",
+							"    pm.response.to.have.header(\"Server\", \"cloudflare\");\r",
+							"    pm.response.to.have.header(\"Link\", \"<https://www.dat.com/>; rel=shortlink\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "host",
+						"value": "www.dat.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.dat.com/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"dat",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://bam.nr-data.net/jserrors/1/NRJS-1972e91952402e67223?a=1216976660&sa=1&v=1.232.0&t=Unnamed%20Transaction&rst=21281&ck=0&s=15d7a0ecb344a56e&ref=https://www.dat.com/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response status code is 200', function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test('Response body is not empty', function () {\r",
+							"    const responseBody = pm.response.text();\r",
+							"    pm.expect(responseBody).to.exist.and.to.not.be.empty;\r",
+							"})\r",
+							"\r",
+							"pm.test('Verify that the request method is POST', function () {\r",
+							"    pm.expect(pm.request.method).to.equal('POST');\r",
+							"})\r",
+							"\r",
+							"pm.test('Header is correct', function () {\r",
+							"    pm.response.to.have.header('content-type', 'image/gif');\r",
+							"    pm.response.to.have.header('Connection', 'keep-alive');\r",
+							"    pm.response.to.have.header('Content-Length', '24');\r",
+							"    pm.response.to.have.header('access-control-allow-methods', 'GET, POST, PUT, HEAD, OPTIONS');\r",
+							"    pm.response.to.have.header('access-control-allow-credentials', 'true');\r",
+							"    pm.response.to.have.header('access-control-allow-origin', '*');\r",
+							"})\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "text/plain"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "bam.nr-data.net"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"xhr\": [\r\n        {\r\n            \"params\": {\r\n                \"method\": \"POST\",\r\n                \"hostname\": \"bam.nr-data.net\",\r\n                \"port\": \"443\",\r\n                \"protocol\": \"https\",\r\n                \"host\": \"bam.nr-data.net:443\",\r\n                \"pathname\": \"/events/1/NRJS-1972e91952402e67223\",\r\n                \"status\": 200\r\n            },\r\n            \"metrics\": {\r\n                \"count\": 2,\r\n                \"txSize\": {\r\n                    \"t\": 1685,\r\n                    \"min\": 67,\r\n                    \"max\": 1618,\r\n                    \"sos\": 2622413,\r\n                    \"c\": 2\r\n                },\r\n                \"rxSize\": {\r\n                    \"t\": 48,\r\n                    \"min\": 24,\r\n                    \"max\": 24,\r\n                    \"sos\": 1152,\r\n                    \"c\": 2\r\n                },\r\n                \"duration\": {\r\n                    \"t\": 154,\r\n                    \"min\": 56,\r\n                    \"max\": 98,\r\n                    \"sos\": 12740,\r\n                    \"c\": 2\r\n                },\r\n                \"cbTime\": {\r\n                    \"t\": 1,\r\n                    \"min\": 0,\r\n                    \"max\": 1,\r\n                    \"sos\": 1,\r\n                    \"c\": 2\r\n                },\r\n                \"time\": {\r\n                    \"t\": 22547,\r\n                    \"min\": 11271,\r\n                    \"max\": 11276,\r\n                    \"sos\": 254183617,\r\n                    \"c\": 2\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"params\": {\r\n                \"method\": \"POST\",\r\n                \"hostname\": \"bam.nr-data.net\",\r\n                \"port\": \"443\",\r\n                \"protocol\": \"https\",\r\n                \"host\": \"bam.nr-data.net:443\",\r\n                \"pathname\": \"/jserrors/1/NRJS-1972e91952402e67223\",\r\n                \"status\": 200\r\n            },\r\n            \"metrics\": {\r\n                \"count\": 1,\r\n                \"txSize\": {\r\n                    \"t\": 6504\r\n                },\r\n                \"rxSize\": {\r\n                    \"t\": 24\r\n                },\r\n                \"duration\": {\r\n                    \"t\": 100\r\n                },\r\n                \"cbTime\": {\r\n                    \"t\": 0\r\n                },\r\n                \"time\": {\r\n                    \"t\": 11273\r\n                }\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bam.nr-data.net/jserrors/1/NRJS-1972e91952402e67223?a=1216976660&sa=1&v=1.232.0&t=Unnamed%20Transaction&rst=21281&ck=0&s=15d7a0ecb344a56e&ref=https://www.dat.com/",
+					"protocol": "https",
+					"host": [
+						"bam",
+						"nr-data",
+						"net"
+					],
+					"path": [
+						"jserrors",
+						"1",
+						"NRJS-1972e91952402e67223"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1216976660"
+						},
+						{
+							"key": "sa",
+							"value": "1"
+						},
+						{
+							"key": "v",
+							"value": "1.232.0"
+						},
+						{
+							"key": "t",
+							"value": "Unnamed%20Transaction"
+						},
+						{
+							"key": "rst",
+							"value": "21281"
+						},
+						{
+							"key": "ck",
+							"value": "0"
+						},
+						{
+							"key": "s",
+							"value": "15d7a0ecb344a56e"
+						},
+						{
+							"key": "ref",
+							"value": "https://www.dat.com/"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
